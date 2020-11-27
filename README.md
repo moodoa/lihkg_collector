@@ -1,20 +1,20 @@
 # lihkg_collector
 get articles (json) from lihkg
 
-![alt text](https://miro.medium.com/max/1050/1*ypslG7x_vZF28O9X-l1ZVQ.jpeg)
+![alt text](https://i.imgur.com/uDyofga.png)
 
 ## Lihkg
 #### article_collector
 * 以 `forum_code` 為參數爬取 Lihkg(連登論壇) 特定台的文章。論壇編號請參考 lihkg 分類。
 
 * 以 `sort_by` 為參數爬取最新 (`new`) 或熱門 (`hot`) 文章。
-* 回傳值為 list。list 內含數個 dict，主要有：
-    1,`thread_id`(文章 ID)
-    2,`title`(文章標題)
-    3,`user_nickname`(作者暱稱)
-    4,`like_count`(按讚數)
-    5,`total_page`(總頁數)
-    6,`category`(文章分類(dict))
+* 回傳值為 list。list 內含數個 dict，主要有：  
+    1,`thread_id`(文章 ID)  
+    2,`title`(文章標題)  
+    3,`user_nickname`(作者暱稱)  
+    4,`like_count`(按讚數)  
+    5,`total_page`(總頁數)  
+    6,`category`(文章分類(dict))  
     等...
 
 ## Requirements
