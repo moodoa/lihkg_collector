@@ -1,5 +1,5 @@
 # lihkg_collector
-get articles (json) from lihkg
+get articles information (json) from lihkg
 
 ![alt text](https://i.imgur.com/uDyofga.png)
 
