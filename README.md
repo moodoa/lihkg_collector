@@ -8,7 +8,7 @@ get articles information (json) from lihkg
 * 以 `forum_code` 為參數爬取 Lihkg(連登論壇) 特定台的文章。論壇編號請參考 lihkg 分類。
 
 * 以 `sort_by` 為參數爬取最新 (`new`) 或熱門 (`hot`) 文章。
-* 回傳值為 list。list 內含數個 dict，主要有：  
+* 回傳值為 list。list 內含數個 dict，每個 dict 內主要有：  
     1,`thread_id`(文章 ID)  
     2,`title`(文章標題)  
     3,`user_nickname`(作者暱稱)  

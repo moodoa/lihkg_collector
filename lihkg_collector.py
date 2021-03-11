@@ -15,7 +15,7 @@ class Lihkg():
             url = f"{self.api}category?cat_id={forum_code}"
         while True:
             complete_url = url + f"&page={page}&count=100&type=now&order={sort_by}"
-            text = requests.get(complete_url, headers=headers).text
+            text = requests.get(complete_url, headers=self.headers).text
             forum_articles = json.loads(text)
             if forum_articles["success"] == 1:
                 output += forum_articles["response"]["items"]
