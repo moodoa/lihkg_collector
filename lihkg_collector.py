@@ -1,5 +1,5 @@
 import json
-import requests
+import cloudscraper
 
 class Lihkg():
     def __init__(self):
@@ -7,6 +7,7 @@ class Lihkg():
         self.api = "https://lihkg.com/api_v2/thread/"
 
     def article_collector(self, forum_code, sort_by):
+        scraper = cloudscraper.create_scraper()
         output = []
         page = 1
         if forum_code == "1":
@@ -15,8 +16,7 @@ class Lihkg():
             url = f"{self.api}category?cat_id={forum_code}"
         while True:
             complete_url = url + f"&page={page}&count=100&type=now&order={sort_by}"
-            text = requests.get(complete_url, headers=self.headers).text
-            forum_articles = json.loads(text)
+            forum_articles = scraper.get(complete_url, headers=self.headers).json()
             if forum_articles["success"] == 1:
                 output += forum_articles["response"]["items"]
                 page+=1
